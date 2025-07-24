@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malle Ganesh - Cybersecurity Professional</title>
+    <style>
+        :root {
+            --purple-primary: #6a0dad;
+            --purple-light: #9d4edd;
+            --black-primary: #1a1a1a;
+            --text-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--black-primary) 0%, var(--purple-primary) 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--black-primary);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--purple-primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1200x400/2c3e50/fff?text=CYBERSECURITY+PROFESSIONAL') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 2rem;
+            border-bottom: 2px solid #34495e;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px #000;
+            animation: pulse 2s infinite;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 1rem auto;
+            background: rgba(0,0,0,0.7);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        .section {
+            background: rgba(26, 26, 26, 0.9);
+            border-radius: 8px;
+            margin: 2rem auto;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+        .section h2 {
+            color: var(--purple-light);
+            border-bottom: 2px solid var(--purple-primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            text-transform: none;
+        }
+        .project-card, .info-card {
+            background: transparent;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .project-card img {
+            max-width: 100%;
+            width: 300px;
+            border: 3px solid #e0aaff;
+            border-radius: 8px;
+        }
+        .project-details {
+            flex: 1;
+            min-width: 250px;
+        }
+        .project-details h3, .info-card h3 {
+            color: #e0aaff;
+            text-shadow: 1px 1px #000;
+        }
+        .project-details p, .info-card p, .info-card li {
+            margin: 0.5rem 0;
+        }
+        .project-details a, .info-card a {
+            color: #6a0dad;
+            font-weight: bold;
+        }
+        .project-details a:hover, .info-card a:hover {
+            color: #e0aaff;
+        }
+        .contact {
+            background: #6a0dad;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            border-top: 5px solid #000;
+        }
+        .contact a {
+            color: #e0aaff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .project-card {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-card::before, .info-card::before {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Update section headings */
+        #skills h2 { content: "Professional Skills & Expertise"; }
+        #education h2 { content: "Educational Background"; }
+        #certifications h2 { content: "Professional Certifications"; }
+        #additional h2 { content: "Additional Information"; }
+        
+        /* Selection styling */
+        ::selection {
+            background: var(--purple-primary);
+            color: var(--text-light);
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--purple-light);
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            color: var(--text-light);
+        }
+
+        .info-card h3 {
+            color: var(--purple-light);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .info-card p, 
+        .info-card li {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0.8rem 0;
+            letter-spacing: 0.02em;
+        }
+
+        .info-card ul {
+            padding-left: 1.5rem;
+        }
+
+        .info-card strong {
+            color: var(--purple-light);
+            font-weight: 600;
+        }
+
+        .project-details {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .project-details h3 {
+            color: var(--purple-light);
+            text-shadow: none;
+        }
+
+        .project-details p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .project-details a {
+            color: var(--purple-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-details a:hover {
+            color: var(--text-light);
+        }
+
+        /* Update selection color */
+        ::selection {
+            background: var(--purple-light);
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Malle Ganesh</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Cybersecurity Specialist</h2>
+        <p>I am Malle Ganesh, a final-year B.Tech. CSE student specializing in cybersecurity and system protection. With expertise in Python, Java, and JavaScript, I am dedicated to implementing robust security solutions and protecting digital assets. Seeking opportunities to contribute to a forward-thinking software company's security infrastructure.</p>
+        <p>Guntur, Andhra Pradesh, 522003 | +91 8978152422 | <a href="mailto:22ht1a4641@gmail.com">22ht1a4641@gmail.com</a></p>
+    </section>
+
+    <section class="section" id="projects">
+        <h2>Projects & Implementations</h2>
+        
+        <div class="project-card">
+            <img src="https://github.com/deadpool7641/Calculator/blob/main/Calculator/download.png" alt="Calculator Application">
+            <div class="project-details">
+                <h3>Calculator</h3>
+                <p><strong>Duration:</strong> March 13–15, 2025</p>
+                <p><strong>Description:</strong> Developed a comprehensive web-based calculator application implementing core mathematical functions. Features include advanced arithmetic operations, parenthetical expressions, and error handling.</p>
+                <p><strong>Role:</strong> Lead Developer</p>
+                <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+                <p><strong>Achievements:</strong> Successfully deployed on GitHub Pages with 100% functionality and responsive design</p>
+                <p><a href="https://github.com/deadpool7641/Calculator">View Project</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <h2>Professional Skills & Expertise</h2>
+        <div class="info-card">
+            <h3>Key Skills</h3>
+            <ul>
+                <li><strong>Programming:</strong> Python, Java, CSS, JavaScript, Bash</li>
+                <li><strong>Web Development:</strong> HTML, CSS, Node.js</li>
+                <li><strong>Cybersecurity Tools:</strong> Wireshark, Nmap, Metasploit, Burp Suite, Kali Linux</li>
+                <li><strong>Security Concepts:</strong> Vulnerability Assessment, Encryption, Penetration Testing</li>
+                <li><strong>Hardware:</strong> System Troubleshooting, Hardware Diagnostics, Digital Systems</li>
+                <li><strong>Tools & Platforms:</strong> Git, Docker, AWS (EC2, S3), Linux, SQL</li>
+                <li><strong>Soft Skills:</strong> Problem-Solving, Adaptability, Technical Documentation</li>
+            </ul>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><strong>Operating Systems:</strong> Linux (Ubuntu, Kali), Windows</li>
+                <li><strong>Frameworks:</strong> Flask, Spring Boot</li>
+                <li><strong>Databases:</strong> MySQL, MongoDB</li>
+                <li><strong>Version Control:</strong> Git, GitHub</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" id="education">
+        <h2>Educational Background</h2>
+        <div class="info-card">
+            <h3>B.Tech. in Computer Science and Engineering (Cybersecurity)</h3>
+            <p>Chalapathi Institute of Technology, Guntur | September 2022 – September 2026</p>
+            <p><strong>Relevant Coursework:</strong> Network Security, Cryptography, Ethical Hacking, Operating Systems, Database Management</p>
+            <h3>High School (MPC)</h3>
+            <p>Hindu College, Guntur | 2022 | Percentage: 72%</p>
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p>Sujatha High School, Guntur, Andhra Pradesh | 2015 | Percentage: 55%</p>
+        </div>
+    </section>
+
+    <section class="section" id="certifications">
+        <h2>Professional Certifications</h2>
+        <div class="info-card">
+            <ul>
+                <li>PALO ALTO CYBERSECURITY VIRTUAL INTERNSHIP</li>
+                <li>AWS DATA ENGINEERING VIRTUAL INTERNSHIP</li>
+                <li>ZSCALER ZERO TRUST CLOUD SECURITY Global Certification</li>
+                <li>AWS CLOUD VIRTUAL INTERNSHIP</li>
+                <li>ETHICAL HACKING - Techgyan Technologies</li>
+                <li>PENETRATION TESTING - Techgyan Technologies</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" id="additional">
+        <h2>Additional Information</h2>
+        <div class="info-card">
+            <p><strong>Languages:</strong> Fluent in Telugu, English, Hindi, Urdu</p>
+            <p><strong>Interests:</strong> Capture the Flag (CTF) Competitions, Hardware Security, Open-Source Contributions</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:22ht1a4641@gmail.com">22ht1a4641@gmail.com</a></p>
+        <p>Phone: +91 8978152422</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/malle-ganesh-2a43062ba">Professional Profile</a></p>
+        <p>GitHub: <a href="https://github.com/deadpool7641/Calculator">Profile</a></p>
+        <p>Portfolio: <a href="[Portfolio/Website]">Online Portfolio</a></p>
+    </section>
+</body>
+</html>
